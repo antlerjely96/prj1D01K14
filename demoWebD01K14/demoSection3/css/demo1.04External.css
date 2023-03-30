@@ -1,0 +1,15 @@
+#the_h3 {
+    color: #008888;
+    text-align: center;
+}
+#theP1 {
+    background-color: #339999;
+    color: #FFFFFF;
+    font-style: italic;
+}
+.theP {
+    color: #008888;
+}
+body {
+    background-image: url('../image/How-to-draw-flower-7.jpg');
+}

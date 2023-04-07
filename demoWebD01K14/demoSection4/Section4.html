@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Margin & Padding & Display</title>
+    <style>
+        #div1 {
+            width: 80%;
+            height: 100px;
+            background-color: #FF0000;
+            display: none;
+        }
+        #div2 {
+            width: 50%;
+            height: 150px;
+            background-color: #00FF00;
+            margin: -10px 20px 30px 40px;
+            padding: 50px;
+        }
+        #div3 {
+            width: 50%;
+            height: 100px;
+            background-color: #0000FF;
+        }
+        #div4 {
+            width: 50%;
+            height: 50%;
+            background-color: #FF00FF;
+            margin: auto;
+        }
+        #div5 {
+            width: 40%;
+            height: 50%;
+            background-color: #FFFF00;
+            display: inline-block;
+        }
+        #div6 {
+            width: 40%;
+            height: 50%;
+            background-color: #000000;
+            color: #FFFFFF;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"> div 1 </div>
+    <div id="div2">
+        <span>div 2</span>
+        <a href="#">Link</a>
+    </div>
+    <div id="div3">
+        <div id="div4">
+            <div id="div5">
+                div 5
+            </div>
+            <div id="div6">
+                div 6
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo JS</title>
+    <script>
+<!--        Lay so a roi kiem tra -->
+        function kiemTra(){
+        //    Khai bao a
+            let a;
+        //    Lay so a
+            a = parseInt(document.getElementById('a').value);
+        //    Kiem tra a la so am hay duong
+            if(a < 0){
+                alert(a + " la so am");
+            } else if(a > 0){
+                alert(a + " la so duong");
+            } else {
+                alert(a + " la so khong am khong duong");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Nhap so nguyen a. Kiem tra a la so am hay duong</h1>
+    <form>
+        a: <input type="number" id="a"><br>
+        <button type="button" onclick="kiemTra()">Kiem tra a la so am hay duong</button>
+    </form>
+</body>
+</html>

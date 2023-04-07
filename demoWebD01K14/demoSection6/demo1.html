@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo JS</title>
+    <script>
+        //Lay a, b ve roi tinh
+        function tinh(){
+        //    Khai bao 2 bien a va b
+            let a, b;
+        //    Lay a tu the input co id = a, a luon co kieu du lieu la string
+            a = parseFloat(document.getElementById('a').value);
+        //    Lay b tu the input co id = b, b luon co kieu du lieu la string
+            b = parseFloat(document.getElementById('b').value);
+        //    Tinh tong a + b
+            let tong = a + b;
+        //    Tinh hieu a - b
+            let hieu = a - b;
+        //    Tinh tich a * b
+            let tich = a * b;
+        //    Tinh thuong a / b
+            let thuong = a / b;
+        //    Hien thi tong hieu tich thuong
+            alert("a + b = " + tong + ", a - b = " + hieu + ", a * b = " + tich + ", a / b = " + thuong);
+        }
+    </script>
+</head>
+<body>
+    <h1>Nhap a, b tu ban phim. Tinh tong, hieu, tich, thuong</h1>
+    <form>
+        a: <input type="number" id="a"><br>
+        b: <input type="number" id="b"><br>
+        <button type="button" onclick="tinh()">Tinh tong, hieu, tich, thuong</button>
+    </form>
+</body>
+</html>

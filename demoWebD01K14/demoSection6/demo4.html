@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo JS</title>
+    <script>
+<!--        Lay a, b, c va kiem tra -->
+        function kiemTra(){
+        //    Khai bao a, b, c
+            let a, b, c;
+        //    Lay a
+            a = parseFloat(document.getElementById('a').value);
+        //    Lay b
+            b = parseFloat(document.getElementById('b').value);
+        //    Lay c
+            c = parseFloat(document.getElementById('c').value);
+        //    Kiem tra
+            if(a > 0 && b > 0 && c > 0){
+                if(a < b + c && b < a + c && c < a + b){
+                    alert("a, b, c la canh tam giac");
+                } else {
+                    alert("a, b, c khong la canh tam giac");
+                }
+            } else {
+                alert("a, b, c khong la canh tam giac");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Nhap 3 so a, b, c. Kiem tra a, b, c co phai canh tam giac khong</h1>
+    <form>
+        a: <input type="number" id="a"><br>
+        b: <input type="number" id="b"><br>
+        c: <input type="number" id="c"><br>
+        <button type="button" onclick="kiemTra()">Kiem tra</button>
+    </form>
+</body>
+</html>

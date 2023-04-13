@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Loop</title>
+    <script>
+        function getN(){
+            //Lay n
+            let n = Number(document.getElementById('n').value);
+            return n;
+        }
+
+        function tinhTong(){
+            let n = getN(), tong = 0;
+            //tinh tong cac so tu 1 den n
+            for (let i = 1; i <= n; i++){
+                tong += i;
+            }
+            //Hien thi ket qua
+            alert("Tong cac so tu 1 den n la: " + tong)
+        }
+
+        function tinhGiaiThua(){
+            let n = getN(), giaiThua = 1;
+            //Tinh n!
+            for (let i = 1; i <= n; i++){
+                giaiThua *= i;
+            }
+            //Hien thi ket qua
+            alert("n! =  " + giaiThua)
+        }
+
+        function tinhTongLe(){
+            let n = getN(), tong = 0;
+            //Tinh tong cac so le tu 1 den n
+            for (let i = 1; i <= n; i++){
+                if(i % 2 == 1){
+                    tong += i;
+                }
+            }
+            //Hien thi ket qua
+            alert("Tong cac so tu 1 den n la: " + tong)
+        }
+
+        function kiemTra(){
+            let n = getN(), count = 0;
+        //    Kiem tra n < 2 hay khong
+            if(n < 2){
+                alert(n + " khong la so nguyen to");
+            } else {
+                //Kiem tra n co chia het cho so nao trong khoang 1 den n
+                for (let i = 2; i < n; i++){
+                    if(n % i == 0){
+                        count++;
+                    }
+                }
+                //    Kiem tra bien count, neu count == 0 => n la so nguyen to
+                if(count == 0){
+                    a//Chay vong lap bat dau tu 2 den n
+                    lert(n + " la so nguyen to");
+                } else {
+                    alert(n + " khong la so nguyen to");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        n: <input type="number" id="n"><br>
+        <button type="button" onclick="tinhTong()">Tinh tong cac so tu 1 den n</button>
+        <button type="button" onclick="tinhGiaiThua()">Tinh n!</button>
+        <button type="button" onclick="tinhTongLe()">Tinh tong cac so le tu 1 den n</button>
+        <button type="button" onclick="kiemTra()">Kiem tra so nguyen to</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Validate</title>
+    <script>
+<!--        Validate dữ liệu -->
+        function validate(){
+        /* Khai báo biến count để đếm số ô input không được nhập dữ liệu */
+            let count = 0;
+        /*    Validate họ tên */
+            //    Lấy họ tên
+            let hoTen = document.getElementById('ho_ten').value;
+            //    Kiểm tra họ tên có bị bỏ trống hay không: kiểm tra độ dài của họ tên
+            if(hoTen.length == 0){
+                //Hiển thị một đoạn text vào thẻ span
+                document.getElementById('error_ho_ten').innerHTML = "Không được để trống họ tên";
+                count++;
+            } else {
+                document.getElementById('error_ho_ten').innerHTML = "";
+            }
+            /* Kiểm tra xem có ô input nào bị bỏ trống không
+                Nếu count == 0 => không có input nào bị bỏ trống
+                count != 0 => có ít nhất 1 input nào đó bị bỏ trống
+            * */
+            if(count != 0){
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Họ tên: <input type="text" id="ho_ten"> <span id="error_ho_ten"></span><br>
+        Ngày sinh: <input type="date" id="ngay_sinh"><br>
+        Địa chỉ: <input type="text" id="dia_chi"><br>
+        Số điện thoại: <input type="text" id="so_dien_thoai"><br>
+        Email: <input type="email" id="email"><br>
+        Password: <input type="password" id="password"><br>
+        Giới tính: <input type="radio" name="gioi_tinh"> Nam
+                    <input type="radio" name="gioi_tinh"> Nữ <br>
+        <button onclick="return validate()">Đăng ký</button>
+    </form>
+</body>
+</html>

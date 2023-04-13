@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Js</title>
+    <script>
+<!--        Nhap a, b, c. Tinh nghiem phuong trinh ax^2 + bx + c = 0-->
+        function tinhNghiem(){
+        //    Khai bao 3 bien a, b, c, result, x, x1, x2
+            let a, b, c, result, x, delta, x1, x2;
+        //    Lay a
+            a = document.getElementById('a').value;
+            //Lay b
+            b = document.getElementById('b').value;
+        //    Lay c
+            c = document.getElementById('c').value;
+        //    Tinh
+            if(a == 0){
+                if(b == 0){
+                    if(c == 0){
+                        result = "Phuong trinh vo so nghiem";
+                    } else {
+                        result = "Phuong trinh vo nghiem";
+                    }
+                } else {
+                    x = -c / b;
+                    result = "Phuong trinh co nghiem x = " + x;
+                }
+            } else {
+                delta = Math.pow(b, 2) - 4 * a * c;
+                if(delta < 0){
+                    result = "Phuong trinh vo nghiem";
+                } else if(delta == 0){
+                    x = -b / (2 * a);
+                    result = "Phuong trinh co nghiem x = " + x;
+                } else {
+                    x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    result = "Phuong trinh co nghiem x1 = " + x1 + ", x2 = " + x2;
+                }
+            }
+            alert(result);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="number" id="a">x<sup>2</sup> + <input type="number" id="b">x + <input type="number" id="c"> = 0<br>
+        <button type="button" onclick="tinhNghiem()">Tinh</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo loop</title>
+    <script>
+<!--        Nhap so nguyen n. Hien thi cac so tu 1 den n -->
+        function hienThiVoiFor(){
+        //    Khai bao n va lay n, result
+            let n = document.getElementById('n').value, result = 1;
+            for(let i = 2; i < n; i++){
+                result += "," + i;
+            }
+            alert(result);
+        }
+
+        function hienThiVoiWhile(){
+            let n = document.getElementById('n').value, result = 1, i = 2;
+            while (i < n){
+                result += ',' + i;
+                i++;
+            }
+            alert(result);
+        }
+
+        function hienThiVoiDoWhile(){
+            let n = document.getElementById('n').value, result = 1, i = 2;
+            do {
+                result += ',' + i;
+                i++;
+            } while (i < n);
+            alert(result);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        n: <input type="number" id="n"><br>
+        <button type="button" onclick="hienThiVoiFor()">Hien thi bang for</button><br>
+        <button type="button" onclick="hienThiVoiWhile()">Hien thi bang while</button><br>
+        <button type="button" onclick="hienThiVoiDoWhile()">Hien thi bang do - while</button><br>
+    </form>
+</body>
+</html>

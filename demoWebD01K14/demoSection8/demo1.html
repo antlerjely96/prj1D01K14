@@ -14,12 +14,20 @@
         /*    Validate họ tên */
             //    Lấy họ tên
             let hoTen = document.getElementById('ho_ten').value;
+            // Khai báo regex của họ tên
+            let regHoTen = /^[A-Za-z àÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬđĐèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆìÌỉỈĩĨíÍịỊòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰỳỲỷỶỹỸýÝỵỴ]+$/;
             //    Kiểm tra họ tên có bị bỏ trống hay không: kiểm tra độ dài của họ tên
             if(hoTen.length == 0){
                 //Hiển thị một đoạn text vào thẻ span
                 document.getElementById('error_ho_ten').innerHTML = "Không được để trống họ tên";
                 count++;
-            } else {
+            }
+            // Kiểm tra họ tên nhập vào có thỏa mãn regHoTen không
+            else if(regHoTen.test(hoTen) == false){
+                document.getElementById('error_ho_ten').innerHTML = "Họ tên chỉ được chứa chữ cái và dấu cách";
+                count++;
+            }
+            else {
                 document.getElementById('error_ho_ten').innerHTML = "";
             }
         /* Validate ngày sinh */

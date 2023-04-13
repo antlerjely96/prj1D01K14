@@ -22,10 +22,80 @@
             } else {
                 document.getElementById('error_ho_ten').innerHTML = "";
             }
-            /* Kiểm tra xem có ô input nào bị bỏ trống không
-                Nếu count == 0 => không có input nào bị bỏ trống
-                count != 0 => có ít nhất 1 input nào đó bị bỏ trống
-            * */
+        /* Validate ngày sinh */
+            //Lấy ngày sinh
+            let ngaySinh = document.getElementById('ngay_sinh').value;
+            //Kiểm tra ngày sinh có bị bỏ trống hay không
+            if(ngaySinh.length == 0){
+                document.getElementById('error_ngay_sinh').innerHTML = "Không được để trống";
+                count++;
+            } else {
+                document.getElementById('error_ngay_sinh').innerHTML = "";
+            }
+        /* Validate địa chỉ */
+            //    Lấy địa chỉ
+            let diaChi = document.getElementById('dia_chi').value;
+            //    Kiểm tra địa chỉ có bị bỏ trống hay không
+            if(diaChi.length == 0){
+                document.getElementById('error_dia_chi').innerHTML = "Không được để trống địa chỉ";
+                count++;
+            } else {
+                document.getElementById('error_dia_chi').innerHTML = "";
+            }
+        /* Validate số điện thoại */
+            //    Lấy số điện thoại
+            let soDienThoai = document.getElementById('so_dien_thoai').value;
+            //    Kiểm tra số điện thoại có bị bỏ trống hay không
+            if(soDienThoai.length == 0){
+                document.getElementById('error_so_dien_thoai').innerHTML = "Không được để trống số điện thoại";
+                count++;
+            } else {
+                document.getElementById('error_so_dien_thoai').innerHTML = "";
+            }
+        /* Validate email */
+            //    Lấy email
+            let email = document.getElementById('email').value;
+            //    Kiểm tra email có bị bỏ trống hay không
+            if(email.length == 0){
+                document.getElementById('error_email').innerHTML = "Không được để trống email";
+                count++;
+            } else {
+                document.getElementById('error_email').innerHTML = "";
+            }
+        /* Validate password */
+            //    Lấy password
+            let password = document.getElementById('password').value;
+            //    Kiểm tra password có bị bỏ trống hay không
+            if(password.length == 0){
+                document.getElementById('error_password').innerHTML = "Không được để trống password";
+                count++;
+            } else {
+                document.getElementById('error_password').innerHTML = "";
+            }
+        /* validate giới tính */
+            let countGioiTinh = 0;
+            //    Khai báo mảng giới tính
+            let gioiTinh = Array();
+            //    Lấy những thẻ radio thể hiện giới tính
+            gioiTinh = document.getElementsByName('gioi_tinh');
+            //  Kiểm tra có thẻ nào được chọn hay không
+            for(let i = 0; i < gioiTinh.length; i++){
+                if(gioiTinh[i].checked){
+                    countGioiTinh++;
+                }
+            }
+            if(countGioiTinh == 0){
+                //    Chưa có giới tính nào được chọn
+                document.getElementById('error_gioi_tinh').innerHTML = "Phải chọn giới tính";
+                count++;
+            } else {
+                //    Đã có giới tính được chọn
+                document.getElementById('error_gioi_tinh').innerHTML = "";
+            }
+        /* Kiểm tra xem có ô input nào bị bỏ trống không
+            Nếu count == 0 => không có input nào bị bỏ trống
+            count != 0 => có ít nhất 1 input nào đó bị bỏ trống
+        * */
             if(count != 0){
                 return false;
             }
@@ -36,13 +106,15 @@
 <body>
     <form>
         Họ tên: <input type="text" id="ho_ten"> <span id="error_ho_ten"></span><br>
-        Ngày sinh: <input type="date" id="ngay_sinh"><br>
-        Địa chỉ: <input type="text" id="dia_chi"><br>
-        Số điện thoại: <input type="text" id="so_dien_thoai"><br>
-        Email: <input type="email" id="email"><br>
-        Password: <input type="password" id="password"><br>
+        Ngày sinh: <input type="date" id="ngay_sinh"> <span id="error_ngay_sinh"></span><br>
+        Địa chỉ: <input type="text" id="dia_chi"> <span id="error_dia_chi"></span><br>
+        Số điện thoại: <input type="text" id="so_dien_thoai"> <span id="error_so_dien_thoai"></span><br>
+        Email: <input type="email" id="email"> <span id="error_email"></span><br>
+        Password: <input type="password" id="password"> <span id="error_password"></span><br>
         Giới tính: <input type="radio" name="gioi_tinh"> Nam
-                    <input type="radio" name="gioi_tinh"> Nữ <br>
+                    <input type="radio" name="gioi_tinh"> Nữ
+                    <span id="error_gioi_tinh"></span>
+                    <br>
         <button onclick="return validate()">Đăng ký</button>
     </form>
 </body>

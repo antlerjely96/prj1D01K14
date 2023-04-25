@@ -18,6 +18,7 @@
         //Đóng kết nối
         include_once '../connect/close.php';
     ?>
+        <a href="create.php">Add a class</a>
         <table border="1px" cellpadding="0" cellspacing="0" width="100%">
             <tr>
                 <th>ID</th>

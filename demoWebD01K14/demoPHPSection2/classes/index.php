@@ -23,6 +23,7 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th></th>
             </tr>
             <?php
                 //Hiển thị dữ liệu
@@ -34,6 +35,10 @@
                     </td>
                     <td>
                         <?= $class['name'] ?>
+                    </td>
+                    <td>
+<!--                        Gắn link nhảy sang form edit kèm theo id của bản ghi cần update trên URL-->
+                        <a href="edit.php?id=<?= $class['id'] ?>">Edit</a>
                     </td>
                 </tr>
             <?php

@@ -1,14 +1,15 @@
 <?php
-    //Lấy dữ liệu ở ô input có name='name'
+    //Lấy dữ liệu mới để update vào db
+    $id = $_POST['id'];
     $name = $_POST['name'];
     //Mở kết nối
     include_once '../connect/open.php';
-    //Query để thêm dữ liệu lên db
-    $sql = "INSERT INTO classes(name) VALUES ('$name')";
+    //Viết query update dữ liệu
+    $sql = "UPDATE classes SET name = '$name' WHERE id = '$id'";
     //Chạy query
     mysqli_query($connect, $sql);
     //Đóng kết nối
     mysqli_close($connect);
-    //quay về trang hiển thị danh sách
+    //Quay về trang danh sách
     header('Location:index.php');
 ?>

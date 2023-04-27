@@ -9,7 +9,7 @@
     //Chạy query
     mysqli_query($connect, $sql);
     //Đóng kết nối
-    mysqli_close($connect);
+    include_once '../connect/close.php';
     //Quay về trang danh sách
     header('Location:index.php');
 ?>

@@ -8,7 +8,7 @@
     //Chạy query
     mysqli_query($connect, $sql);
     //Đóng kết nối
-    mysqli_close($connect);
+    include_once '../connect/close.php';
     //quay về trang hiển thị danh sách
     header('Location:index.php');
 ?>

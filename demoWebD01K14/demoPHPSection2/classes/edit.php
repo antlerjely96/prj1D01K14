@@ -18,7 +18,7 @@
         //Chạy query
         $classes = mysqli_query($connect, $sql);
         //Đóng kết nối
-        mysqli_close($connect);
+        include_once '../connect/close.php';
         foreach ($classes as $class){
     ?>
         <form method="post" action="update.php">

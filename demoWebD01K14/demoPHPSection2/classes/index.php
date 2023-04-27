@@ -9,6 +9,8 @@
 </head>
 <body>
     <?php
+        //Nhúng header vào
+        include_once '../layout/header.php';
         //Nhúng file open.php để mở kết nối
         include_once '../connect/open.php';
         //Query để lấy dữ liệu từ bảng classes trên db về
@@ -50,5 +52,9 @@
                 }
             ?>
         </table>
+    <?php
+        //Nhúng footer
+        include_once '../layout/footer.php';
+    ?>
 </body>
 </html>

@@ -8,9 +8,17 @@
     <title>Add a class</title>
 </head>
 <body>
+<?php
+    //Nhúng header vào
+    include_once '../layout/header.php';
+?>
     <form method="post" action="store.php">
         Name: <input type="text" name="name"><br>
         <button>Add</button>
     </form>
+<?php
+    //Nhúng footer vào
+    include_once '../layout/footer.php';
+?>
 </body>
 </html>

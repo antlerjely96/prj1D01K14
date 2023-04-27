@@ -9,6 +9,8 @@
 </head>
 <body>
     <?php
+        //Nhúng header vào
+        include_once '../layout/header.php';
         //Lấy id của bản ghi cần update từ trên URL về
         $id = $_GET['id'];
         //Mở kết nối
@@ -28,6 +30,8 @@
         </form>
     <?php
         }
+        //Nhúng footer vào
+        include_once '../layout/footer.php';
     ?>
 </body>
 </html>

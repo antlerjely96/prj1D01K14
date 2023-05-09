@@ -12,12 +12,15 @@
         //Mở kết nối
         include_once '../connect/open.php';
         //Query
-        $sql = "SELECT students.*, classes.name AS class_name FROM students INNER JOIN classes ON students.class_id = classes.id";
+        $sql = "SELECT students.*, classes.name AS class_name FROM students
+                INNER JOIN classes
+                ON students.class_id = classes.id";
         //Chạy query
         $students = mysqli_query($connect, $sql);
         //Đóng kết nối
         include_once '../connect/close.php';
     ?>
+        <a href="create.php">Add a student</a>
         <table border="1px" cellspacing="0" cellpadding="0" width="100%">
             <tr>
                 <th>ID</th>

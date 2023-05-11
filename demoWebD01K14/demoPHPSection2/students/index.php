@@ -29,6 +29,8 @@
                 <th>Email</th>
                 <th>Gender</th>
                 <th>Class</th>
+                <th></th>
+                <th></th>
             </tr>
             <?php
                 //Đổ dữ liệu vào bảng
@@ -58,6 +60,12 @@
                     </td>
                     <td>
                         <?= $student['class_name'] ?>
+                    </td>
+                    <td>
+                        <a href="edit.php?id=<?= $student['id'] ?>">Edit</a>
+                    </td>
+                    <td>
+                        <a href="destroy.php?id=<?= $student['id'] ?>">Delete</a>
                     </td>
                 </tr>
             <?php

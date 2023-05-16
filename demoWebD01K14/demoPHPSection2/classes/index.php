@@ -1,3 +1,12 @@
+<?php
+    //Cho phép làm việc với session
+    session_start();
+    //Kiểm tra đã tồn tại email trên session hay chưa, nếu chưa tồn tại thì cho quay về login
+    if(!isset($_SESSION['email'])){
+        //Quay về trang login
+        header("Location:../admin/login.php");
+    }
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,6 +29,7 @@
         //Đóng kết nối
         include_once '../connect/close.php';
     ?>
+        <a href="../admin/logout.php">Logout</a><br>
         <a href="create.php">Add a class</a>
         <table border="1px" cellpadding="0" cellspacing="0" width="100%">
             <tr>

@@ -25,7 +25,7 @@
     include_once '../connect/close.php';
 
 ?>
-    <form method="post" action="update.php">
+    <form method="post" action="update.php" enctype="multipart/form-data">
         <?php
             //Đổ dữ liệu bản ghi trước khi sửa
             foreach ($students as $student){
@@ -43,6 +43,9 @@
                             }
                         ?>
                     > Male <br>
+            Image: <input type="file" name="image" value="<?= $student['image'] ?>">
+                    <img src="../image/<?= $student['image'] ?>">
+                    <br>
             Class: <select name="class_id">
                 <option> - Choose -</option>
                 <?php

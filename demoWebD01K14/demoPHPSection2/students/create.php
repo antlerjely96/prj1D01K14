@@ -18,12 +18,13 @@
     //Đóng kết nối
     include_once '../connect/close.php';
 ?>
-    <form method="post" action="store.php">
+    <form method="post" action="store.php" enctype="multipart/form-data">
         Name: <input type="text" name="name"><br>
         Phone: <input type="text" name="phone"><br>
         Email: <input type="email" name="email"><br>
         Gender: <input type="radio" name="gender" value="0"> Female
                 <input type="radio" name="gender" value="1"> Male <br>
+        Image: <input type="file" name="image"><br>
         Class: <select name="class_id">
             <option> - Choose - </option>
             <?php

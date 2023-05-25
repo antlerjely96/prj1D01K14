@@ -28,6 +28,7 @@
                 <th>Phone</th>
                 <th>Email</th>
                 <th>Gender</th>
+                <th>Image</th>
                 <th>Class</th>
                 <th></th>
                 <th></th>
@@ -57,6 +58,9 @@
                                 echo 'Male';
                             }
                         ?>
+                    </td>
+                    <td>
+                        <img src="../image/<?= $student['image'] ?>" width="50px" height="50px">
                     </td>
                     <td>
                         <?= $student['class_name'] ?>

@@ -35,6 +35,9 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
+                    <a href="../carts/index.php">View cart</a>
+                </div>
+                <div class="row">
                     <?php
                         include_once '../../connect/open.php';
                         $sql = "SELECT * FROM products";
@@ -50,7 +53,7 @@
                                 </a><br>
                                 <?= $product['name'] ?><br>
                                 <?= $product['price'] ?><br>
-
+                                <a href="../carts/add-to-cart.php?id=<?= $product['id'] ?>">Add to cart</a>
                             </div>
                     <?php
 //                            $temp++;

@@ -91,6 +91,8 @@
 </form>
 <!--Link xóa toàn bộ sản phẩm trên giỏ hàng-->
 <a href="delete-all-product-in-cart.php">Delete cart</a> <br>
+<!--Link để đặt hàng-->
+<a href="order.php">Order</a> <br>
 <!--Link để quay về trang danh sách sản phẩm-->
 <a href="../products/index.php">Product List</a>
 </body>
